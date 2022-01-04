@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import dbConnect from "../lib/dbConnect"
+
 export default function Home() {
   return (
     <div>
@@ -17,7 +18,7 @@ export default function Home() {
 
 export async function getServerSideProps(){
   try {
-    await dbConnect()
+    await dbConnect();
     return {props: {movies: 123}}
   }
-}
+};
